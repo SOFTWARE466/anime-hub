@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магическая Битва</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Магическая Битва</h1>
+    <nav>
+        <button onclick="showSection('about')">О аниме</button>
+        <button onclick="showSection('characters')">Персонажи</button>
+        <button onclick="showSection('powers')">Способности</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- О АНИМЕ -->
+    <section id="about" class="active">
+        <h2>О аниме</h2>
+        <p>
+            «Магическая битва» — это история о Юджи Итадори, который случайно становится
+            сосудом для короля проклятий — Рёмен Сукуны. Его ждут битвы, магия и сильнейшие враги.
+        </p>
+        <img src="ita.jpg" alt="Итадори">
+    </section>
+
+    <!-- ПЕРСОНАЖИ -->
+    <section id="characters">
+        <h2>Главные персонажи</h2>
+        <ul>
+            <li><b>Юджи Итадори</b> — сосуд Сукуны.</li>
+            <li><b>Мегуми Фушигуро</b> — техник шикигами.</li>
+            <li><b>Нобара Кугисаки</b> — техника молотка и гвоздей.</li>
+            <li><b>Годжо Сатору</b> — сильнейший маг современности.</li>
+        </ul>
+        <img src="https://i.imgur.com/vr0Yy1V.jpeg" alt="Персонажи">
+    </section>
+
+    <!-- СПОСОБНОСТИ -->
+    <section id="powers">
+        <h2>Способности</h2>
+        <p>Каждый персонаж обладает уникальной техникой:</p>
+        <ul>
+            <li>⚡ Черная вспышка</li>
+            <li>🌀 Бесконечность (Годжо)</li>
+            <li>🐺 Шикигами (Мегуми)</li>
+            <li>🔨 Техника резонанса (Нобара)</li>
+        </ul>
+        <img src="https://i.imgur.com/7CiqA6t.jpeg" alt="Способности">
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

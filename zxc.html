@@ -1,0 +1,82 @@
+1 мысал
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Position Мысалы</title>
+
+<style>
+body{
+    font-family: Arial;
+}
+
+/* Ортақ блок стилі */
+.box{
+    width: 150px;
+    height: 100px;
+    background: #f2d2a9;
+    border: 2px solid #b97a56;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* STATIC */
+.static{
+    position: static;
+    background: #d9edf7;
+}
+
+/* RELATIVE */
+.relative{
+    position: relative;
+    left: 40px;
+    top: 20px;
+    background: #fcf8e3;
+}
+
+/* ABSOLUTE */
+.container{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border: 2px dashed gray;
+    margin-top: 40px;
+}
+
+.absolute{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #f2dede;
+}
+
+/* FIXED */
+.fixed{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #dff0d8;
+}
+</style>
+
+</head>
+<body>
+
+<h2>1. Static (әдепкі)</h2>
+<div class="box static">STATIC</div>
+
+<h2>2. Relative</h2>
+<div class="box relative">RELATIVE</div>
+
+<h2>3. Absolute</h2>
+<div class="container">
+    Контейнер
+    <div class="box absolute">ABSOLUTE</div>
+</div>
+
+<h2>4. Fixed</h2>
+<div class="box fixed">FIXED</div>
+
+<p style="margin-top:600px;">Төменге скролл жасаңыз — FIXED орнында қалады.</p>
+
+</body>
+</html>

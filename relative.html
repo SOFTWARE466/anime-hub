@@ -1,0 +1,80 @@
+Relative бағыттары (көрнекі мысал)
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Relative бағыттары</title>
+
+<style>
+body{
+    font-family: Arial;
+}
+
+.container{
+    width: 500px;
+    height: 300px;
+    border: 2px dashed gray;
+    margin: 50px auto;
+    position: relative;
+}
+
+.box{
+    width: 100px;
+    height: 70px;
+    background: #f5d0a9;
+    border: 2px solid brown;
+    text-align: center;
+    line-height: 70px;
+    position: relative;
+}
+
+/* LEFT */
+.left{
+    left: 40px;
+    background: #ffd966;
+}
+
+/* RIGHT */
+.right{
+    right: 40px;
+    background: #a4c2f4;
+}
+
+/* TOP */
+.top{
+    top: -20px;
+    background: #b6d7a8;
+}
+
+/* BOTTOM */
+.bottom{
+    bottom: -20px;
+    background: #f4cccc;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Relative + left</h2>
+<div class="container">
+    <div class="box left">left: 40px</div>
+</div>
+
+<h2>Relative + right</h2>
+<div class="container">
+    <div class="box right">right: 40px</div>
+</div>
+
+<h2>Relative + top</h2>
+<div class="container">
+    <div class="box top">top: -20px</div>
+</div>
+
+<h2>Relative + bottom</h2>
+<div class="container">
+    <div class="box bottom">bottom: -20px</div>
+</div>
+
+</body>
+</html>

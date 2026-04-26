@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Қызықты сайт</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Қош келдіңіз!</h1>
+    <p>Бұл сайт түстерді өзгертеді және сізге хабарлама көрсетеді.</p>
+
+    <button onclick="changeColor()">Түсті өзгерту</button>
+    <button onclick="greetUser()">Қарсы алу</button>
+
+    <script>
+        function changeColor() {
+            const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFC300"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function greetUser() {
+            let name = prompt("Атыңызды енгізіңіз:");
+            if (name) {
+                alert("Сәлем, " + name + "! Қош келдіңіз!");
+            } else {
+                alert("Сәлем, қонақ! Қош келдіңіз!");
+            }
+        }
+    </script>
+
+</body>
+</html>
