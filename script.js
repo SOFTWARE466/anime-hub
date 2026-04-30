@@ -6,10 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Burger menu for small screens
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
-  burger && burger.addEventListener('click', () => {
-    const expanded = burger.getAttribute('aria-expanded') === 'true';
-    burger.setAttribute('aria-expanded', String(!expanded));
-    nav.style.display = expanded ? 'none' : 'flex';
+  const toggleNav = (open) => {
+    if (!nav || !burger) return;
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    nav.setAttribute('aria-hidden', String(!open));
+  };
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      toggleNav(!expanded);
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 760 && nav && nav.classList.contains('open')) {
+      toggleNav(false);
+    }
   });
 
   // Smooth anchor scroll
@@ -22,9 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         el.scrollIntoView({behavior: 'smooth', block: 'start'});
         // close mobile nav
-        if (window.innerWidth < 760 && nav.style.display === 'flex') {
-          nav.style.display = 'none';
-          burger.setAttribute('aria-expanded', 'false');
+        if (window.innerWidth < 760 && nav && nav.classList.contains('open')) {
+          toggleNav(false);
         }
       }
     });
